@@ -1,0 +1,18 @@
+* Quickmath Library
+A very slow zig math library.
+
+* Contains
+- Real Math
+- Vector2 (Floating Point)
+- Vector3 (Floating Point)
+- Vector4 (Floating Point)
+- Quaternions
+- Vector2 (Integer)
+- Rectangle (Integer)
+- Rectangle (Floating Point)
+- UV Coords
+- Matrix4x4
+- Colour RGB
+- Colour RGBA
+- Direction
+- Cardinal
