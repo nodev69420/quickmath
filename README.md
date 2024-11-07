@@ -2,7 +2,8 @@
 A very slow zig math library.
 
 # To Use
-Run the command on project root:
+Run the `zig fetch` command on your project root:
+
 `zig fetch --save git+https://github.com/nodev69420/quickmath/#HEAD`
 
 Then add to your `build.zig`:
