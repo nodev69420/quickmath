@@ -3,11 +3,19 @@ const std = @import("std");
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
-    const lib = b.addStaticLibrary(.{
-        .name = "quickmath",
-        .root_source_file = b.path("src/quickmath.zig"),
+    const root_source_file = b.path("src/quickmath.zig");
+
+    _ = b.addModule("quickmath", .{
+        .root_source_file = root_source_file,
         .target = target,
         .optimize = optimize,
+    });
+
+    const lib = b.addStaticLibrary(.{
+        .name = "quickmath",
+        .target = target,
+        .optimize = optimize,
+        .root_source_file = root_source_file,
     });
     b.installArtifact(lib);
 
